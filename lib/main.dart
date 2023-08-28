@@ -1,3 +1,4 @@
+import 'package:fabrics/models/provider/app_bar_selected.dart';
 import 'package:fabrics/screens/account_screen.dart';
 import 'package:fabrics/screens/checkout_screen.dart';
 import 'package:fabrics/screens/home_screen.dart';
@@ -7,9 +8,17 @@ import 'package:fabrics/screens/search_screen.dart';
 import 'package:fabrics/screens/welcome_screen.dart';
 import 'package:fabrics/screens/wishlist.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const Main());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: ((context) => PageNumber()),
+      ),
+    ],
+    child: const Main(),
+  ));
 }
 
 class Main extends StatelessWidget {
@@ -21,7 +30,7 @@ class Main extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(iconTheme: IconThemeData(color: Colors.grey[300])),
-      initialRoute: WelcomeScreen.id,
+      initialRoute: HomeScreen.id,
       routes: {
         WelcomeScreen.id: (context) => const WelcomeScreen(),
         RegisterScreen.id: (context) => const RegisterScreen(),

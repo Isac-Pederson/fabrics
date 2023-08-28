@@ -6,10 +6,9 @@ import 'package:flutter/material.dart';
 
 import '../../screens/search_screen.dart';
 import '../constants/colors.dart';
+import 'icon_circle.dart';
 
 class RoundedBottomAppBar extends StatelessWidget {
-  final double iconSize = 30;
-  final double selectedIcon = 35;
   const RoundedBottomAppBar({
     super.key,
   });
@@ -42,66 +41,35 @@ class RoundedBottomAppBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              IconButton(
-                tooltip: 'Shopping Cart',
-                icon: Icon(
-                  Icons.shopping_cart,
-                  size: iconSize,
-                ),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).pushNamed(CheckoutScreen.id);
-                },
+              IconCircle(
+                icon: Icons.shopping_cart,
+                pageNum: 1,
+                pushScreen: CheckoutScreen.id,
+                tooltip: 'Checkout Cart',
               ),
-              IconButton(
-                tooltip: 'Favorites',
-                icon: Icon(
-                  Icons.favorite,
-                  size: iconSize,
-                ),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).pushNamed(FavoriteScreen.id);
-                },
+              IconCircle(
+                icon: Icons.favorite,
+                pageNum: 2,
+                pushScreen: FavoriteScreen.id,
+                tooltip: 'Favorite',
               ),
-              Stack(children: [
-                CircleAvatar(
-                  radius: 25,
-                  backgroundColor: kMidnightBlue,
-                ),
-                IconButton(
-                  tooltip: 'Home',
-                  icon: Icon(
-                    Icons.home,
-                    size: selectedIcon,
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                    Navigator.of(context).pushNamed(HomeScreen.id);
-                  },
-                ),
-              ]),
-              IconButton(
+              IconCircle(
+                icon: Icons.home,
+                pageNum: 3,
+                pushScreen: HomeScreen.id,
+                tooltip: 'Home',
+              ),
+              IconCircle(
+                icon: Icons.search,
+                pageNum: 4,
+                pushScreen: SearchScreen.id,
                 tooltip: 'Search',
-                icon: Icon(
-                  Icons.search,
-                  size: iconSize,
-                ),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).pushNamed(SearchScreen.id);
-                },
               ),
-              IconButton(
+              IconCircle(
+                icon: Icons.person,
+                pageNum: 5,
+                pushScreen: AccountScreen.id,
                 tooltip: 'Account Settings',
-                icon: Icon(
-                  Icons.person,
-                  size: iconSize,
-                ),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).pushNamed(AccountScreen.id);
-                },
               ),
             ],
           ),

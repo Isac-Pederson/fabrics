@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
           automaticallyImplyLeading: false,
           title: Center(
               child: Text(
-            'Add filter function here? Idk if I like this you might need to move it somwhere else? Or maybe have an FAB?',
+            'Add filter / categories function here? Idk if I like this you might need to move it somwhere else? Or maybe have an FAB?',
             style: GoogleFonts.oswald(color: Colors.white, fontSize: 8),
           )),
         ),
