@@ -1,5 +1,6 @@
 import 'package:fabrics/components/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../components/widgets/rounded_bottom_app_bar.dart';
@@ -28,27 +29,32 @@ class HomeScreen extends StatelessWidget {
       body: GridView.count(
         crossAxisCount: 2,
         children: List.generate(25, (index) {
-          return Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: kMidnightBlue,
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(20),
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 3,
-                      blurRadius: 7,
-                      offset: const Offset(0, 3),
-                    )
-                  ]),
-              child: Center(
-                child: Text(
-                  'Item $index',
-                  style:
-                      GoogleFonts.oswald(fontSize: 25, color: Colors.grey[300]),
+          return Bounceable(
+            onTap: () {},
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    side: BorderSide(color: kBlueGray, width: 2)),
+                shadowColor: Colors.black,
+                elevation: 10,
+                color: Colors.white,
+                child: Column(
+                  children: [
+                    Flexible(
+                      child: Image.network('https://t.ly/xj2V6'),
+                    ),
+                    Center(
+                      child: Text(
+                        'Altra Shoes $index',
+                        style: GoogleFonts.oswald(
+                            fontSize: 14,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w300),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

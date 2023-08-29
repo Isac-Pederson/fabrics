@@ -18,7 +18,7 @@ class IconCircle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<PageNumber>(
+    return Consumer<PageSelected>(
       builder: (context, page, child) {
         return Stack(children: [
           CircleAvatar(

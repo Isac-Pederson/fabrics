@@ -1,7 +1,7 @@
 import 'package:fabrics/components/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class PageNumber with ChangeNotifier {
+class PageSelected with ChangeNotifier {
   double page = 3;
 
   final double iconSize = 30;

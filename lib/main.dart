@@ -14,7 +14,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(
-        create: ((context) => PageNumber()),
+        create: ((context) => PageSelected()),
       ),
     ],
     child: const Main(),

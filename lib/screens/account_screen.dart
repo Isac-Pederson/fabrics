@@ -1,6 +1,7 @@
 import 'package:fabrics/components/widgets/rounded_bottom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../components/widgets/detailed_card.dart';
 
 class AccountScreen extends StatelessWidget {
   static String id = 'accountScreen';
@@ -11,10 +12,39 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: const RoundedBottomAppBar(),
       body: SafeArea(
-          child: Center(
-        child: Text(
-            "Add Account Stuff Here :) \n (I'm just being lazy with the frontend bs) ",
-            style: GoogleFonts.oswald(color: Colors.grey, fontSize: 30)),
+          child: ListView(
+        children: [
+          DetailedCard(
+            icon: Icons.account_box_rounded,
+            text: 'Settings',
+            onTap: () {},
+          ),
+          DetailedCard(
+            icon: Icons.assignment_sharp,
+            text: 'Orders',
+            onTap: () {},
+          ),
+          DetailedCard(
+            icon: Icons.favorite,
+            text: 'Favorites',
+            onTap: () {},
+          ),
+          DetailedCard(
+            icon: Icons.search,
+            text: 'Search',
+            onTap: () {},
+          ),
+          DetailedCard(
+            icon: Icons.shopping_cart,
+            text: 'Shopping Cart',
+            onTap: () {},
+          ),
+          DetailedCard(
+            icon: Icons.logout,
+            text: 'Logout',
+            onTap: () {},
+          ),
+        ],
       )),
     );
   }
