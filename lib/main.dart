@@ -35,7 +35,7 @@ class Main extends StatelessWidget {
         WelcomeScreen.id: (context) => const WelcomeScreen(),
         RegisterScreen.id: (context) => const RegisterScreen(),
         LoginScreen.id: (context) => const LoginScreen(),
-        HomeScreen.id: (context) => const HomeScreen(),
+        HomeScreen.id: (context) => HomeScreen(),
         FavoriteScreen.id: (context) => const FavoriteScreen(),
         CheckoutScreen.id: (context) => const CheckoutScreen(),
         AccountScreen.id: (context) => const AccountScreen(),

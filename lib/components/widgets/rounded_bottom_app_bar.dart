@@ -20,8 +20,8 @@ class RoundedBottomAppBar extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
-            topRight: Radius.circular(30),
-            topLeft: Radius.circular(30),
+            topRight: Radius.circular(20),
+            topLeft: Radius.circular(20),
           ),
           boxShadow: [
             BoxShadow(
@@ -32,8 +32,8 @@ class RoundedBottomAppBar extends StatelessWidget {
           ]),
       child: ClipRRect(
         borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(30),
-          topRight: Radius.circular(30),
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
         ),
         child: BottomAppBar(
           elevation: 1,

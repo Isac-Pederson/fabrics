@@ -1,13 +1,16 @@
 import 'package:fabrics/components/constants/colors.dart';
+import 'package:fabrics/models/classes/item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../components/widgets/rounded_bottom_app_bar.dart';
+import '../components/widgets/shopping_item_card.dart';
+import '../models/classes/item_list.dart';
 
 class HomeScreen extends StatelessWidget {
   static String id = 'homeScreen';
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,51 +18,34 @@ class HomeScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child: AppBar(
-          backgroundColor: kBlueGray,
+          backgroundColor: Colors.white,
+          shadowColor: kBlueGray,
           automaticallyImplyLeading: false,
-          title: Center(
-              child: Text(
-            'Add filter / categories function here? Idk if I like this you might need to move it somwhere else? Or maybe have an FAB?',
-            style: GoogleFonts.oswald(color: Colors.white, fontSize: 8),
-          )),
-        ),
-      ),
-      backgroundColor: Colors.white,
-      bottomNavigationBar: const RoundedBottomAppBar(),
-      body: GridView.count(
-        crossAxisCount: 2,
-        children: List.generate(25, (index) {
-          return Bounceable(
-            onTap: () {},
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    side: BorderSide(color: kBlueGray, width: 2)),
-                shadowColor: Colors.black,
-                elevation: 10,
-                color: Colors.white,
-                child: Column(
-                  children: [
-                    Flexible(
-                      child: Image.network('https://t.ly/xj2V6'),
-                    ),
-                    Center(
-                      child: Text(
-                        'Altra Shoes $index',
-                        style: GoogleFonts.oswald(
-                            fontSize: 14,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w300),
-                      ),
-                    ),
-                  ],
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: Center(
+                child: IconButton(
+                  icon: Icon(
+                    Icons.list,
+                    size: 40,
+                    color: kBlueGray,
+                  ),
+                  onPressed: () {},
                 ),
               ),
             ),
-          );
-        }),
+          ],
+        ),
+      ),
+      backgroundColor: Colors.white70,
+      bottomNavigationBar: const RoundedBottomAppBar(),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return ShoppingItemCard(
+              urlImage: items[index].url, title: items[index].title);
+        },
       ),
     );
   }

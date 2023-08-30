@@ -4,11 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/colors.dart';
 
-class DetailedCard extends StatelessWidget {
+class AccountCard extends StatelessWidget {
   final String text;
   final IconData icon;
   final VoidCallback onTap;
-  const DetailedCard({
+  const AccountCard({
     super.key,
     required this.text,
     required this.icon,

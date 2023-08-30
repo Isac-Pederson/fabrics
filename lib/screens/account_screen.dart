@@ -5,7 +5,7 @@ import 'package:fabrics/screens/wishlist.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../components/widgets/detailed_card.dart';
+import '../components/widgets/account_card.dart';
 import 'checkout_screen.dart';
 
 class AccountScreen extends StatelessWidget {
@@ -19,21 +19,21 @@ class AccountScreen extends StatelessWidget {
       body: SafeArea(
           child: ListView(
         children: [
-          DetailedCard(
+          AccountCard(
             icon: Icons.account_box_rounded,
             text: 'Settings',
             onTap: () {
               // Go to account page
             },
           ),
-          DetailedCard(
+          AccountCard(
             icon: Icons.assignment_sharp,
             text: 'Orders',
             onTap: () {
               // Go to order history page
             },
           ),
-          DetailedCard(
+          AccountCard(
             icon: Icons.favorite,
             text: 'Favorites',
             onTap: () {
@@ -42,7 +42,7 @@ class AccountScreen extends StatelessWidget {
               Navigator.of(context).pushNamed(FavoriteScreen.id);
             },
           ),
-          DetailedCard(
+          AccountCard(
             icon: Icons.search,
             text: 'Search',
             onTap: () {
@@ -51,7 +51,7 @@ class AccountScreen extends StatelessWidget {
               Navigator.of(context).pushNamed(SearchScreen.id);
             },
           ),
-          DetailedCard(
+          AccountCard(
             icon: Icons.shopping_cart,
             text: 'Shopping Cart',
             onTap: () {
@@ -60,7 +60,7 @@ class AccountScreen extends StatelessWidget {
               Navigator.of(context).pushNamed(CheckoutScreen.id);
             },
           ),
-          DetailedCard(
+          AccountCard(
             icon: Icons.logout,
             text: 'Logout',
             onTap: () {},
