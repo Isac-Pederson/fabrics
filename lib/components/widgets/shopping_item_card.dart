@@ -1,9 +1,7 @@
+import 'package:fabrics/components/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../models/classes/item.dart';
-import '../constants/colors.dart';
 
 class ShoppingItemCard extends StatelessWidget {
   final String urlImage;
@@ -25,7 +23,7 @@ class ShoppingItemCard extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
-              side: BorderSide(color: Colors.black, width: 1)),
+              side: BorderSide(color: Colors.black54, width: 1)),
           shadowColor: Colors.black,
           elevation: 10,
           color: Colors.white,
