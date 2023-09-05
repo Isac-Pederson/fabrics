@@ -3,7 +3,7 @@ import 'package:material_symbols_icons/symbols.dart';
 
 import '../components/constants/colors.dart';
 import '../components/widgets/input_field.dart';
-import '../components/widgets/sign_in_button.dart';
+import '../components/widgets/custom_button.dart';
 import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                 textInputType: TextInputType.visiblePassword,
               ),
               const Padding(padding: EdgeInsets.only(top: 200)),
-              SignInButton(
+              CustomButton(
                 text: 'Login',
                 color: kNavyBlue,
                 onPressed: () {

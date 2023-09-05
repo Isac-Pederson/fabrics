@@ -44,7 +44,10 @@ class HomeScreen extends StatelessWidget {
         itemCount: items.length,
         itemBuilder: (context, index) {
           return ShoppingItemCard(
-              urlImage: items[index].url, title: items[index].title);
+            urlImage: items[index].url,
+            title: items[index].title,
+            item: items[index],
+          );
         },
       ),
     );

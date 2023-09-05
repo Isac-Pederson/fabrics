@@ -5,7 +5,7 @@ import 'package:fabrics/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/symbols.dart';
 
-import '../components/widgets/sign_in_button.dart';
+import '../components/widgets/custom_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50),
-              child: SignInButton(
+              child: CustomButton(
                 color: kNavyBlue,
                 text: 'Login',
                 onPressed: () {
@@ -44,7 +44,7 @@ class WelcomeScreen extends StatelessWidget {
                 },
               ),
             ),
-            SignInButton(
+            CustomButton(
               text: 'Register',
               color: kBlueGray,
               onPressed: () {
