@@ -5,6 +5,8 @@ import '../../models/classes/item.dart';
 import 'detailed_item.dart';
 import 'item_card.dart';
 
+//is this widget needed anymore??
+
 class ShoppingItemCard extends StatelessWidget {
   final String urlImage;
   final String title;

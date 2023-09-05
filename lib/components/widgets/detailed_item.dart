@@ -15,45 +15,55 @@ class DetailedItemScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView(children: [
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: Column(
-              children: [
-                ItemCard(
+        child: Padding(
+          padding: const EdgeInsets.all(8),
+          child: Column(
+            children: [
+              Flexible(
+                child: ItemCard(
                   urlImage: item.url,
                   title: item.title,
                 ),
-                Text(
-                  item.description,
-                  style: kItemStyle,
+              ),
+              SizedBox(
+                width: 25,
+                height: 25,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: item.color,
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(30))),
                 ),
-                Text(
-                  '\$${item.price}',
-                  style: kItemStyle,
-                ),
-                SizedBox(
-                  width: 300,
-                  child: CustomButton(
-                      text: 'Checkout',
-                      color: kBlueGray,
-                      onPressed: () {
-                        //add to cart
-                      }),
-                ),
-                SizedBox(
-                  width: 300,
-                  child: CustomButton(
-                      text: 'Add to Favorites',
-                      color: kDarkBlue,
-                      onPressed: () {
-                        //add to favorites
-                      }),
-                )
-              ],
-            ),
+              ),
+              Text(
+                item.description,
+                style: kItemStyle,
+              ),
+              Text(
+                '\$${item.price}',
+                style: kItemStyle,
+              ),
+              SizedBox(
+                width: 300,
+                child: CustomButton(
+                    text: 'Checkout',
+                    color: kBlueGray,
+                    onPressed: () {
+                      //add to cart
+                    }),
+              ),
+              SizedBox(
+                width: 300,
+                child: CustomButton(
+                    text: 'Add to Favorites',
+                    color: kDarkBlue,
+                    onPressed: () {
+                      //add to favorites
+                    }),
+              )
+            ],
           ),
-        ]),
+        ),
       ),
     );
   }
