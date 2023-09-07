@@ -60,9 +60,7 @@ class DetailedItemScreen extends StatelessWidget {
                     text: 'Add to Favorites',
                     color: kDarkBlue,
                     onPressed: () {
-                      context
-                          .read<ItemChanges>()
-                          .addFavorite(item: item, isFavorite: item.isFavorite);
+                      context.read<ItemChanges>().addFavorite(item: item);
                     }),
               )
             ],

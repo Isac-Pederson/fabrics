@@ -15,9 +15,9 @@ class ItemChanges with ChangeNotifier {
   }
 
   void addFavorite({item, isFavorite}) {
-    if (isFavorite == false) {
+    if (item.isFavorite == false) {
       favorites.add(item);
-      isFavorite = true;
+      item.isFavorite = true;
     } else {
       return;
     }
