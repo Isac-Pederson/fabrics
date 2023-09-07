@@ -1,4 +1,5 @@
 import 'package:fabrics/models/provider/app_bar_selected.dart';
+import 'package:fabrics/models/provider/item_changes.dart';
 import 'package:fabrics/screens/account_screen.dart';
 import 'package:fabrics/screens/checkout_screen.dart';
 import 'package:fabrics/screens/home_screen.dart';
@@ -15,6 +16,9 @@ void main() {
     providers: [
       ChangeNotifierProvider(
         create: ((context) => PageSelected()),
+      ),
+      ChangeNotifierProvider(
+        create: ((context) => ItemChanges()),
       ),
     ],
     child: const Main(),

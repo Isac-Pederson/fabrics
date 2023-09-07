@@ -2,7 +2,9 @@ import 'package:fabrics/components/constants/colors.dart';
 import 'package:fabrics/components/constants/text_styling.dart';
 import 'package:fabrics/components/widgets/custom_button.dart';
 import 'package:fabrics/components/widgets/item_card.dart';
+import 'package:fabrics/models/provider/item_changes.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../models/classes/item.dart';
 
@@ -58,7 +60,9 @@ class DetailedItemScreen extends StatelessWidget {
                     text: 'Add to Favorites',
                     color: kDarkBlue,
                     onPressed: () {
-                      //add to favorites
+                      context
+                          .read<ItemChanges>()
+                          .addFavorite(item: item, isFavorite: item.isFavorite);
                     }),
               )
             ],

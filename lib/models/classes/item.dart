@@ -16,17 +16,4 @@ class Item {
     required this.description,
     required this.isFavorite,
   });
-
-  void toggleFavorite() {
-    isFavorite = !isFavorite;
-    //notifyListeners
-  }
-
-  void addToCart() {
-    //item added to cart/checkout
-  }
-
-  void removeStock() {
-    //not sure if this will be used but it's here in case I need it
-  }
 }
