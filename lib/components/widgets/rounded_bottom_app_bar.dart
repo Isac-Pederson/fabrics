@@ -1,7 +1,7 @@
 import 'package:fabrics/screens/account_screen.dart';
 import 'package:fabrics/screens/checkout_screen.dart';
 import 'package:fabrics/screens/home_screen.dart';
-import 'package:fabrics/screens/wishlist.dart';
+import 'package:fabrics/screens/favorite_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../screens/search_screen.dart';

@@ -1,7 +1,7 @@
 import 'package:fabrics/components/widgets/rounded_bottom_app_bar.dart';
 import 'package:fabrics/models/provider/app_bar_selected.dart';
 import 'package:fabrics/screens/search_screen.dart';
-import 'package:fabrics/screens/wishlist.dart';
+import 'package:fabrics/screens/favorite_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

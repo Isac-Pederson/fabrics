@@ -7,7 +7,7 @@ import 'package:fabrics/screens/login_screen.dart';
 import 'package:fabrics/screens/register_screen.dart';
 import 'package:fabrics/screens/search_screen.dart';
 import 'package:fabrics/screens/welcome_screen.dart';
-import 'package:fabrics/screens/wishlist.dart';
+import 'package:fabrics/screens/favorite_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

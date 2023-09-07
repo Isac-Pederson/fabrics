@@ -14,7 +14,7 @@ class ItemChanges with ChangeNotifier {
     //not sure if this will be used but it's here in case I need it
   }
 
-  void addFavorite({item, isFavorite}) {
+  void addFavorite({item}) {
     if (item.isFavorite == false) {
       favorites.add(item);
       item.isFavorite = true;
