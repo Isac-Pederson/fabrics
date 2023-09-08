@@ -1,4 +1,4 @@
-import 'package:fabrics/components/widgets/rounded_bottom_app_bar.dart';
+import 'package:fabrics/components/widgets/bottom_app_bar/rounded_bottom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatelessWidget {

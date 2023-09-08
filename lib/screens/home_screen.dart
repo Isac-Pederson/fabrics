@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../components/widgets/rounded_bottom_app_bar.dart';
+import '../components/widgets/bottom_app_bar/rounded_bottom_app_bar.dart';
 import '../components/widgets/shopping_item_card.dart';
 import '../models/classes/item_list.dart';
 

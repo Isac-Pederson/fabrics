@@ -4,8 +4,8 @@ import 'package:fabrics/screens/home_screen.dart';
 import 'package:fabrics/screens/favorite_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../screens/search_screen.dart';
-import '../constants/colors.dart';
+import '../../../screens/search_screen.dart';
+import '../../constants/colors.dart';
 import 'icon_circle.dart';
 
 class RoundedBottomAppBar extends StatelessWidget {

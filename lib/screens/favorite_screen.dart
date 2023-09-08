@@ -1,4 +1,4 @@
-import 'package:fabrics/components/widgets/rounded_bottom_app_bar.dart';
+import 'package:fabrics/components/widgets/bottom_app_bar/rounded_bottom_app_bar.dart';
 import 'package:fabrics/models/favorite_list.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
