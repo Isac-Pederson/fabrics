@@ -19,9 +19,16 @@ class FavoriteScreen extends StatelessWidget {
         )),
       );
     } else {
-      return const Scaffold(
+      return  Scaffold(
         bottomNavigationBar: RoundedBottomAppBar(),
-        body: SafeArea(child: Text('Favorited items in here!!')),
+        body: SafeArea(child: 
+        ListView.builder(itemBuilder: (context, index){
+          return ListTile(title: Text(favorites[index].title,));
+        },
+        itemCount: favorites.length,)
+        
+        
+        ),
       );
     }
   }
