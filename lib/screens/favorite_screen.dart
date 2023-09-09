@@ -1,8 +1,10 @@
 import 'package:fabrics/components/constants/text_styling.dart';
 import 'package:fabrics/components/widgets/bottom_app_bar/rounded_bottom_app_bar.dart';
 import 'package:fabrics/models/favorite_list.dart';
+import 'package:fabrics/models/provider/item_changes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class FavoriteScreen extends StatelessWidget {
   static String id = 'favoriteScreen';
@@ -44,14 +46,19 @@ class FavoriteScreen extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        //remove from Icons list
+                        context.read<ItemChanges>().removeFavorite(favorites[index]);
+                      },
                       icon: const Icon(
                         Icons.delete,
                         color: Colors.redAccent,
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        //move to Shopping Cart
+                      },
                       icon: const Icon(
                         Icons.shopping_cart,
                         color: Colors.blueAccent,

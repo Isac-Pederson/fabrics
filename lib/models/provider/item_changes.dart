@@ -27,5 +27,6 @@ class ItemChanges with ChangeNotifier {
 
   void removeFavorite(item) {
     favorites.remove(item);
+    item.isFavorite = false;
   }
 }
