@@ -7,6 +7,7 @@ class Item {
   double price;
   Color color;
   bool isFavorite = false;
+  bool isInCart = false;
 
   Item({
     required this.color,
@@ -15,5 +16,6 @@ class Item {
     required this.url,
     required this.description,
     required this.isFavorite,
+    required this.isInCart,
   });
 }

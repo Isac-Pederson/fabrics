@@ -1,10 +1,11 @@
-import 'package:fabrics/components/constants/text_styling.dart';
 import 'package:fabrics/components/widgets/bottom_app_bar/rounded_bottom_app_bar.dart';
 import 'package:fabrics/models/favorite_list.dart';
 import 'package:fabrics/models/provider/item_changes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
+import '../components/widgets/item_tile.dart';
 
 class FavoriteScreen extends StatelessWidget {
   static String id = 'favoriteScreen';
@@ -28,43 +29,31 @@ class FavoriteScreen extends StatelessWidget {
             child: ListView.builder(
           itemBuilder: (context, index) {
             return Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: ListTile(
-                tileColor: Colors.white,
-                shape: const RoundedRectangleBorder(
-                  side: BorderSide(width: 1, color: Colors.black),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5),
+              padding: EdgeInsets.all(16.0),
+              child: ItemTile(
+                iconButton1: IconButton(
+                  onPressed: () {
+                    //remove from Icons list
+                    context.read<ItemChanges>().removeFromList(
+                        item: favorites[index], list: favorites);
+                  },
+                  icon: const Icon(
+                    Icons.delete,
+                    color: Colors.redAccent,
                   ),
                 ),
-                leading: Image.network(favorites[index].url),
-                title: Text(
-                  favorites[index].title,
-                  style: kItemStyle,
-                ),
-                trailing: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        //remove from Icons list
-                        context.read<ItemChanges>().removeFavorite(favorites[index]);
-                      },
-                      icon: const Icon(
-                        Icons.delete,
-                        color: Colors.redAccent,
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        //move to Shopping Cart
-                      },
-                      icon: const Icon(
-                        Icons.shopping_cart,
-                        color: Colors.blueAccent,
-                      ),
-                    )
-                  ],
+                index: index,
+                list: favorites,
+                iconButton2: IconButton(
+                  onPressed: () {
+                    context
+                        .read<ItemChanges>()
+                        .addToCart(item: favorites[index]);
+                  },
+                  icon: const Icon(
+                    Icons.shopping_cart,
+                    color: Colors.blueAccent,
+                  ),
                 ),
               ),
             );

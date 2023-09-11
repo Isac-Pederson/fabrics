@@ -1,17 +1,17 @@
+import 'package:fabrics/models/cart_list.dart';
+
 import '../favorite_list.dart';
 import 'package:flutter/material.dart';
 
 class ItemChanges with ChangeNotifier {
-  void toggleFavorite() {
-    //notifyListeners
-  }
-
-  void addToCart() {
-    //item added to cart/checkout
-  }
-
-  void removeStock() {
-    //not sure if this will be used but it's here in case I need it
+  //temp funcs til FireBase handles this
+  void addToCart({item}) {
+    if (item.isInCart == false) {
+      shoppingCart.add(item);
+      item.isInCart = true;
+    } else {
+      return;
+    }
   }
 
   void addFavorite({item}) {
@@ -21,12 +21,10 @@ class ItemChanges with ChangeNotifier {
     } else {
       return;
     }
-
-    print(favorites.length);
   }
 
-  void removeFavorite(item) {
-    favorites.remove(item);
+  void removeFromList({item, list}) {
+    list.remove(item);
     item.isFavorite = false;
   }
 }

@@ -51,7 +51,7 @@ class DetailedItemScreen extends StatelessWidget {
                     text: 'Checkout',
                     color: kBlueGray,
                     onPressed: () {
-                      //add to cart
+                      context.read<ItemChanges>().addToCart(item: item);
                     }),
               ),
               SizedBox(
@@ -60,6 +60,14 @@ class DetailedItemScreen extends StatelessWidget {
                     text: 'Add to Favorites',
                     color: kDarkBlue,
                     onPressed: () {
+                      if (item.isFavorite == false) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content:
+                                Center(child: Text('Item Added to Favorites')),
+                          ),
+                        );
+                      }
                       context.read<ItemChanges>().addFavorite(item: item);
                     }),
               )

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "945667833882",
+    "project_id": "fabrics-e935b",
+    "storage_bucket": "fabrics-e935b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945667833882:android:e8963dd57b518be05251a3",
+        "android_client_info": {
+          "package_name": "com.example.fabrics"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJfH1nGF7ZOcuDHTca6sdhZxxdb1eiy-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
