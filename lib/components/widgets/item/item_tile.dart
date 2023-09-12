@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../models/classes/item.dart';
-import '../constants/text_styling.dart';
+import '../../../models/classes/item.dart';
+import '../../constants/text_styling.dart';
 
 class ItemTile extends StatelessWidget {
   final List<Item> list;
@@ -19,7 +19,6 @@ class ItemTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      tileColor: Colors.white,
       shape: const RoundedRectangleBorder(
         side: BorderSide(width: 1, color: Colors.black),
         borderRadius: BorderRadius.all(

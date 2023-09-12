@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 
-import '../../models/classes/item.dart';
+import '../../../models/classes/item.dart';
 import 'detailed_item.dart';
 import 'item_card.dart';
 

@@ -1,12 +1,12 @@
 import 'package:fabrics/components/constants/colors.dart';
 import 'package:fabrics/components/constants/text_styling.dart';
 import 'package:fabrics/components/widgets/custom_button.dart';
-import 'package:fabrics/components/widgets/item_card.dart';
+import 'package:fabrics/components/widgets/item/item_card.dart';
 import 'package:fabrics/models/provider/item_changes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../models/classes/item.dart';
+import '../../../models/classes/item.dart';
 
 class DetailedItemScreen extends StatelessWidget {
   const DetailedItemScreen({super.key, required this.item});

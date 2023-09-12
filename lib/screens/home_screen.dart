@@ -1,16 +1,13 @@
 import 'package:fabrics/components/constants/colors.dart';
-import 'package:fabrics/models/classes/item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bounceable/flutter_bounceable.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../components/widgets/bottom_app_bar/rounded_bottom_app_bar.dart';
-import '../components/widgets/shopping_item_card.dart';
+import '../components/widgets/item/shopping_item_card.dart';
 import '../models/classes/item_list.dart';
 
 class HomeScreen extends StatelessWidget {
   static String id = 'homeScreen';
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +15,6 @@ class HomeScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child: AppBar(
-          backgroundColor: Colors.white,
           shadowColor: kBlueGray,
           automaticallyImplyLeading: false,
           actions: [

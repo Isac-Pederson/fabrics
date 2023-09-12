@@ -7,12 +7,14 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController controller = TextEditingController();
     return Scaffold(
       bottomNavigationBar: const RoundedBottomAppBar(),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SearchBar(
+          controller: controller,
           backgroundColor: MaterialStatePropertyAll(Colors.grey[200]),
           padding: const MaterialStatePropertyAll<EdgeInsets>(
               EdgeInsets.symmetric(horizontal: 16.0)),
@@ -20,6 +22,7 @@ class SearchScreen extends StatelessWidget {
             Icons.search,
             color: Colors.black54,
           ),
+          onChanged: (value) {},
         ),
       )),
     );

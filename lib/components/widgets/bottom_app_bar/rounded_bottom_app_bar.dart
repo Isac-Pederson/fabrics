@@ -4,7 +4,6 @@ import 'package:fabrics/screens/home_screen.dart';
 import 'package:fabrics/screens/favorite_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../../screens/search_screen.dart';
 import '../../constants/colors.dart';
 import 'icon_circle.dart';
 
@@ -12,8 +11,6 @@ class RoundedBottomAppBar extends StatelessWidget {
   const RoundedBottomAppBar({
     super.key,
   });
-  //create page number system when implmenting provider to highlight the page the user is on
-  //Page = 0 is home page and the color should show that, pg 1 is cart, pg 2 is wishlist/favs etc... and should make the icon bigger
 
   @override
   Widget build(BuildContext context) {
@@ -59,12 +56,12 @@ class RoundedBottomAppBar extends StatelessWidget {
                 pushScreen: HomeScreen.id,
                 tooltip: 'Home',
               ),
-              IconCircle(
-                icon: Icons.search,
-                pageNum: 4,
-                pushScreen: SearchScreen.id,
-                tooltip: 'Search',
-              ),
+              // IconCircle(
+              //   icon: Icons.search,
+              //   pageNum: 4,
+              //   pushScreen: SearchScreen.id,
+              //   tooltip: 'Search',
+              // ),
               IconCircle(
                 icon: Icons.person,
                 pageNum: 5,

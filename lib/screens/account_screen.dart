@@ -1,7 +1,7 @@
 import 'package:fabrics/components/widgets/bottom_app_bar/rounded_bottom_app_bar.dart';
 import 'package:fabrics/models/provider/app_bar_selected.dart';
-import 'package:fabrics/screens/search_screen.dart';
 import 'package:fabrics/screens/favorite_screen.dart';
+import 'package:fabrics/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -20,12 +20,12 @@ class AccountScreen extends StatelessWidget {
           child: ListView(
         children: [
           AccountCard(
-            icon: Icons.account_box_rounded,
-            text: 'Settings',
-            onTap: () {
-              // Go to account page
-            },
-          ),
+              icon: Icons.account_box_rounded,
+              text: 'Settings',
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed(SettingScreen.id);
+              }),
           AccountCard(
             icon: Icons.assignment_sharp,
             text: 'Orders',
@@ -42,15 +42,15 @@ class AccountScreen extends StatelessWidget {
               Navigator.of(context).pushNamed(FavoriteScreen.id);
             },
           ),
-          AccountCard(
-            icon: Icons.search,
-            text: 'Search',
-            onTap: () {
-              context.read<PageSelected>().changePageNumber(4.0);
-              Navigator.of(context).pop();
-              Navigator.of(context).pushNamed(SearchScreen.id);
-            },
-          ),
+          // AccountCard(
+          //   icon: Icons.search,
+          //   text: 'Search',
+          //   onTap: () {
+          //     context.read<PageSelected>().changePageNumber(4.0);
+          //     Navigator.of(context).pop();
+          //     Navigator.of(context).pushNamed(SearchScreen.id);
+          //   },
+          // ),
           AccountCard(
             icon: Icons.shopping_cart,
             text: 'Shopping Cart',

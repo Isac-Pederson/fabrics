@@ -29,7 +29,6 @@ class AccountCard extends StatelessWidget {
                 side: BorderSide(color: kBlueGray, width: 2)),
             shadowColor: Colors.black,
             elevation: 10,
-            color: Colors.grey[200],
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
@@ -44,7 +43,6 @@ class AccountCard extends StatelessWidget {
                   Icon(
                     icon,
                     size: 35,
-                    color: Colors.black,
                   )
                 ],
               ),

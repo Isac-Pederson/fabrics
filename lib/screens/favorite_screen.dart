@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import '../components/widgets/item_tile.dart';
+import '../components/widgets/item/item_tile.dart';
 
 class FavoriteScreen extends StatelessWidget {
   static String id = 'favoriteScreen';
@@ -29,7 +29,7 @@ class FavoriteScreen extends StatelessWidget {
             child: ListView.builder(
           itemBuilder: (context, index) {
             return Padding(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: ItemTile(
                 iconButton1: IconButton(
                   onPressed: () {

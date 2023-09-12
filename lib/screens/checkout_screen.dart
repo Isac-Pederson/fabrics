@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import '../components/widgets/item_tile.dart';
+import '../components/widgets/item/item_tile.dart';
 import '../models/cart_list.dart';
 import '../models/provider/item_changes.dart';
 
